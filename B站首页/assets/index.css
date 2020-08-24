@@ -1,0 +1,282 @@
+body, html {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  overflow-y: scroll;
+}
+/* header区域 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  background-color: #fff;
+  z-index: 3;
+}
+
+.header .logo {
+  margin-left: 18px;
+}
+
+.header .search-input {
+  width: 132px;
+  height: 24px;
+  margin-left: 5px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  color: #999;
+}
+
+.header .search-input svg {
+  margin-left: 10px;
+}
+
+.header .search-input span {
+  margin-left: 5px;
+  width: 92px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header .avatar svg {
+  border-radius: 50%;
+}
+
+.header .download-app {
+  width: 78px;
+  height: 23px;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  background-color: #fb7299;
+  line-height: 23px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+/* 导航区域 */
+.nav-box {
+  position: fixed;
+  top: 54px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.nav-box .nav-list {
+  width: 85%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  padding-left: 24px;
+}
+
+.nav-box .nav-list::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-box .nav {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 40px;
+  color: #757575;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-box .nav.active {
+  border-color: #fb7299;
+  color: #fb7299;
+}
+
+.nav-box .down {
+  position: absolute;
+  top: -3px;
+  right: 13px;
+}
+
+
+.hide-nav-box {
+  position: fixed;
+  top: 54px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding-bottom: 20px;
+  z-index: 2;
+  transition: top 0.3s;
+}
+
+.hide-nav-box.hide {
+  top: -117px
+}
+
+.hide-nav-box .nav-list {
+  /* display: none; */
+}
+
+.hide-nav-box .nav {
+  display: inline-block;
+  margin: 0 14px 10px;
+  padding: 6px 0;
+  width: 32px;
+  text-align: center;
+  color: #757575;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+}
+
+
+.hide-nav-box .nav.big {
+  width: 46px;
+  margin: 0 7px;
+}
+
+.hide-nav-box .nav.active {
+  border-color: #fb7299;
+  color: #fb7299;
+}
+
+.hide-nav-box .up {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* 轮播图区域 */
+.banner-box{
+  position: relative;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.banner-box .banner-list{
+  position: absolute;
+  left: 0;
+  width: calc(350px *4);
+  transition: left 0.3s;
+}
+.banner-box .banner{
+  float: left;
+  width: 350px;
+  height: 110px;
+}
+.banner-box .poster{
+  width: 100%;
+  height: 100%;
+}
+.banner-box .index-list{
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  display: flex;
+  height: 10px;
+  align-items: center;
+  padding: 0 3px;
+}
+.banner-box .index{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin: 0 3px;
+  background-color: #fff;
+}
+.banner-box .index.active{
+  background-color: #fb7299;
+}
+
+/* 视频列表区域 */
+.video-box{
+  padding: 100px 6px 0 6px;
+}
+.video-box .video-list::after{
+  display:block;
+  content: '';
+  clear: both;
+}
+.video-box .video{
+  width: 50%;
+  float: left;
+}
+.video-box .poster{
+  position: relative;
+  height: 106px;
+  margin: 0 6px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.video-box .poster img{
+  width: 100%;
+  height: 100%;
+}
+.video-box .poster .info{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  padding: 7px 0 3px 10px;
+  font-size: 12px;
+  color: #fff;
+  background-image: linear-gradient(rgba(33,33,33,0),rgba(33,33,33,.5));
+}
+.video-box .info div{
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.video-box .info svg{
+  fill: #fff;
+  margin-right: 3px;
+}
+.video-box .title{
+  margin: 6px 6px 10px 6px;
+  height: 38px;
+  line-height: 20px;
+  font-size: 13px;
+   /* 单行文本溢出打点：
+  设置文本不换行
+  white-space: nowrap;
+  设置文字溢出用省略号代替
+  text-overflow: ellipsis; */
+  /* 多行文本溢出打点： */
+  overflow: hidden;
+  /* 设置盒子为伸缩盒 */
+  display: -webkit-box;
+  /* 设置伸缩盒内子元素的排列方式为vertical */
+  -webkit-box-orient: vertical;
+  /* 限制一个块元素内显示的文本行数 */
+  -webkit-line-clamp: 2;
+}
+.footer{
+  margin-top: 40px;
+}
+.footer p{
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #999;
+}
